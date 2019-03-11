@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+<html lang="zxx" class="no-js">
+
+<head>
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="colorlib">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>Naim Personal</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700,900" rel="stylesheet">
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+	<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+	<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+	<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/owl.carousel.css' %}">
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+
+</head>
+
+<body>
+
+	<!-- Start Preloader Area -->
+	<div class="preloader-area">
+		<div class="loader-box">
+			<div class="loader"></div>
+		</div>
+	</div>
+	<!-- End Preloader Area -->
+
+
+	<!-- Start Header Area -->
+	<header id="header">
+		<div class="container main-menu">
+			<div class="row align-items-center d-flex">
+				<div id="logo">
+					<a href="{% url 'index' %}"><img src="{% static 'img/naim_logo.png' %}" alt="" title="" /></a>
+				</div>
+				<nav id="nav-menu-container">
+					<ul class="nav-menu">
+						<li class=""><a class="active" href="{% url 'index' %}">Home</a></li>
+						<li><a href="{% url 'basic_app:about' %}">About</a></li>
+						<li class="menu-has-children"><a href="{% url 'basic_app:contact' %}">Pages</a>
+							<ul>
+								<li><a href="{% url 'basic_app:contact' %}">Contact</a></li>
+								<li><a href="{% url 'basic_app:services' %}">Service</a></li>
+								<li><a href="{% url 'basic_app:portfolio_details' %}">Portfolio Details</a></li>
+							</ul>
+						</li>
+						<li class="menu-has-children"><a href="">Blog</a>
+							<ul>
+								<li><a href="{% url 'basic_app:blog_single' %}">Blog Single</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<script src="{% static 'js/vendor/jquery-2.2.4.min.js' %}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+	 crossorigin="anonymous"></script>
+	<script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="{% static 'js/easing.min.js' %}"></script>
+	<script src="{% static 'js/hoverIntent.js' %}"></script>
+	<script src="{% static 'js/superfish.min.js' %}"></script>
+	<script src="{% static 'js/mn-accordion.js' %}"></script>
+	<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+	<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+	<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+	<script src="{% static 'js/jquery.circlechart.js' %}"></script>
+	<script src="{% static 'js/mail-script.js' %}"></script>
+	<script src="{% static 'js/wow.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+
+	{% block body_block %}
+
+	{% endblock %}
+
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+{% extends 'basic_app/base.html' %}
+ {% load staticfiles %}
+
+	{% block body_block %}
+
+	<!-- start banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						Services
+					</h1>
+					<p class="link-nav">
+						<span class="box">
+							<a href="{% url 'index' %}">Home </a>
+							<a href="{% url 'basic_app:services' %}">Service</a></p>
+					</span>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- Start Service Area -->
+	<section class="service-area section-gap white">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="section-title">
+						<h2>Service Offers</h2>
+						<p>I provide good services in Web Design and Development</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="single-service wow fadeInUp" data-wow-duration="1s">
+						<span class="lnr lnr-screen"></span>
+						<h4>
+							<span>Web</span> Design
+						</h4>
+						<p>I will make your website as you need.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+						<span class="lnr lnr-database"></span>
+						<h4><span>Web</span> Development
+						</h4>
+						<p>I will develop your website pretty well</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="single-service wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
+						<span class="lnr lnr-chart-bars"></span>
+						<h4><span>Web</span> Development
+						</h4>
+						<p>If you are looking for a web developer for your website here I am</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Service Area -->
+
+	<!-- Horizontal bar -->
+	<div class="container">
+		<hr>
+	</div>
+
+	<!-- Start Testimonials Area -->
+	<section class="testimonials_area section-gap">
+		<div class="container">
+			<div class="testi_slider owl-carousel">
+				<div class="item">
+					<div class="testi_item">
+						<img src="{% static 'img/naim_logo.png' %}" alt="">
+						<h4>Web Design</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<div class="wow fadeIn" data-wow-duration="1s">
+							<p>
+								Need a website?Feel free to contact me
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="testi_item">
+						<img src="{% static 'img/naim_logo.png' %}" alt="">
+						<h4>Fanny Spencer</h4>
+						<ul class="list">
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+							<li><a href="#"><i class="fa fa-star"></i></a></li>
+						</ul>
+						<div class="wow fadeIn" data-wow-duration="1s">
+							<p>
+								Do you need develop your website?I will do anything in development section.Contact me.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Testimonials Area -->
+
+	<!-- Start Contact Area -->
+	<section class="contact-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="contact-title">
+						<h2>Contact Me</h2>
+						<p>Do you need a experienced web Developer.Here I am to develop your website and make that faster and secured.I do almost everything on a website.Contact me to solve your problem.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row mt-80">
+				<div class="col-lg-4 col-md-4">
+					<div class="contact-box">
+						<h4>+88 01716735440</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<div class="contact-box">
+						<h4>naimurrahman79127@gmail.com</h4>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-4">
+					<div class="contact-box">
+						<h4>NaimurRahman.me</h4>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<a href="{% url 'basic_app:hire_me' %}" class="primary-btn mt-50" data-text="Hire Me">
+						<span>H</span>
+						<span>i</span>
+						<span>r</span>
+						<span>e</span>
+						<span> </span>
+						<span>M</span>
+						<span>e</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Contact Area -->
+
+	<!-- start footer Area -->
+	<footer class="footer-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer-top flex-column">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}">
+								<img src="{% static 'img/naim_logo.png' %}" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=100004762008433" target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/charlie79127" target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/naimur-rahman-567713152/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#">
+			<i class="lnr lnr-arrow-up"></i>
+		</a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+{% endblock %}

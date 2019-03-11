@@ -1,0 +1,117 @@
+{% extends 'basic_app/base.html' %}
+ {% load staticfiles %}
+
+  {% block body_block %}
+
+  <link rel="stylesheet" href="{% static 'css/form.css' %}">
+<style>
+  #Contact_Form{
+    
+    padding: 10px 30px 20px 0px;
+  }
+</style>
+	<!-- start banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						Contact Me
+					</h1>
+					<p class="link-nav">
+						<span class="box">
+							<a href="{% url 'index' %}">Home </a>
+							<a href="{% url 'basic_app:contact' %}">Contact</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- Start contact-page Area -->
+	<section class="contact-page-area section-gap-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 d-flex flex-column address-wrap">
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-home"></span>
+						</div>
+						<div class="contact-details">
+							<h5>Sirajganj,Bangladesh</h5>
+							<p>
+								Dhanbandi Sirajganj
+							</p>
+						</div>
+					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-phone-handset"></span>
+						</div>
+						<div class="contact-details">
+							<h5>+88 01716735440</h5>
+							<p>available 24 hours everyday</p>
+						</div>
+					</div>
+					<div class="single-contact-address d-flex flex-row">
+						<div class="icon">
+							<span class="lnr lnr-envelope"></span>
+						</div>
+						<div class="contact-details">
+							<h5>naimurrahman79127@gmail.com</h5>
+							<p>Send me your query anytime!</p>
+						</div>
+					</div>
+				</div>
+
+          <div id="Contact_Form" class="col-lg-6">
+            <form method="POST" >
+              <div class="inner_form">
+
+
+                {% csrf_token %}
+                {{ contact_form.as_p }}
+                <input type="submit" class="btn btn-primary" value="Send Message">
+              </div>
+            </form>
+            </div>
+			</div>
+		</div>
+	</section>
+	<!-- End contact-page Area -->
+
+	<!-- start footer Area -->
+	<footer class="footer-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer-top flex-column">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}">
+								<img src="{% static 'img/naim_logo.png' %}" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=100004762008433"   target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/charlie79127"  target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/naimur-rahman-567713152/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#">
+			<i class="lnr lnr-arrow-up"></i>
+		</a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+{% endblock %}

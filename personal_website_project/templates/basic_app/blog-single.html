@@ -1,0 +1,134 @@
+{% extends 'basic_app/base.html' %}
+ {% load staticfiles %}
+
+  {% block body_block %}
+
+	<!-- start banner Area -->
+	<section class="banner-area relative">
+		<div class="container">
+			<div class="row d-flex align-items-center justify-content-center">
+				<div class="about-content col-lg-12">
+					<h1 class="text-white">
+						Blog Details
+					</h1>
+					<p class="link-nav">
+						<span class="box">
+							<a href="{% url 'index' %}">Home </a>
+							<a href="{% url 'basic_app:blog_single' %}">Blog Details</a>
+						</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End banner Area -->
+
+	<!-- Start post-content Area -->
+
+
+
+
+
+
+
+
+
+	<section class="post-content-area single-post-area section-gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 posts-list">
+					<div class="single-post row">
+						<div class="col-lg-12">
+							<div class="feature-img">
+								<img class="img-fluid" src="{% static 'img/naim5.jpg' %}" alt="">
+							</div>
+						</div>
+
+						<div class="col-lg-12">
+
+
+						</div>
+					</div>
+					<div class="navigation-area">
+						<div class="row">
+
+
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4 sidebar-widgets">
+					<div class="widget-wrap">
+						<div class="single-sidebar-widget search-widget">
+							<form class="search-form" action="#">
+								<input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'">
+								<button type="submit"><i class="fa fa-search"></i></button>
+							</form>
+						</div>
+						<div class="single-sidebar-widget user-info-widget">
+							<img src="{% static 'img/naim6.png' %}" alt="">
+							<a href="{% url 'basic_app:hire_me' %}"><h4>Web Developer</h4></a>
+							<p>
+								Web Developer
+							</p>
+							<ul class="social-links">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-github"></i></a></li>
+								<li><a href="#"><i class="fa fa-behance"></i></a></li>
+							</ul>
+							<p>
+								Myself Naimur Rahman.I am a profesional web developer with 3 years experience.I am actually a backend developer.I work in python(Django).Django is most popular web framework.And I love to work with Django.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End post-content Area -->
+  <div class="col-lg-8">
+    <div class="jumbotron">
+      {% for adminPost in admin_post %}
+        {{ adminPost.content }}
+      {% endfor %}
+    </div>
+  </div>
+
+	<!-- Horizontal bar -->
+	<div class="container">
+		<hr>
+	</div>
+
+	<!-- start footer Area -->
+	<footer class="footer-area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer-top flex-column">
+						<div class="footer-logo">
+							<a href="{% url 'index' %}">
+								<img src="{% static 'img/naim_logo.png' %}" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<div class="footer-social">
+              <a href="https://www.facebook.com/profile.php?id=100004762008433"   target="_blank"><i class="fa fa-facebook"></i></a>
+              <a href="https://twitter.com/charlie79127"  target="_blank"><i class="fa fa-twitter"></i></a>
+              <a href="https://www.linkedin.com/in/naimur-rahman-567713152/" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
+
+	<!-- ####################### Start Scroll to Top Area ####################### -->
+	<div id="back-top">
+		<a title="Go to Top" href="#">
+			<i class="lnr lnr-arrow-up"></i>
+		</a>
+	</div>
+	<!-- ####################### End Scroll to Top Area ####################### -->
+
+{% endblock %}

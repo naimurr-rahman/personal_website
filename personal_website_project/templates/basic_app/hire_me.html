@@ -1,0 +1,47 @@
+{% extends 'basic_app/base.html' %}
+
+  {% block body_block %}
+  <section class="contact-area section-gap">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="contact-title">
+            <h2>Hire Me</h2>
+            <p>I profesional Web Developer with 3 years experience.I am expert at Python(Django).I got many project done with django framework.I am also expert in many DBMS like MySql,PostgreSQL and SQLite3 which is preinstalled in django it is pretty enough.I will do everything of your website in backend and make your website more secured.okay.?And if you have need any changes on your frontend I will do that.I have knowledge in JavaScript,jQuery and BootStrap.You contact me to discuss about your problem.I am always available to get your problem solved.okay.?</p>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-80">
+        <div class="col-lg-4 col-md-4">
+          <div class="contact-box">
+            <h4>+88 01716735440</h4>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="contact-box">
+            <h4>naimurrahman79127@gmail.com</h4>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-4">
+          <div class="contact-box">
+              <h4>NaimurRahman.me</h4>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <a href="{% url 'basic_app:hire_me' %}" class="primary-btn mt-50" data-text="Hire Me">
+            <span>H</span>
+            <span>i</span>
+            <span>r</span>
+            <span>e</span>
+            <span> </span>
+            <span>M</span>
+            <span>e</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endblock %}
